@@ -7,8 +7,9 @@ import EllipsisText from '../../../ellipsisText';
 import { ConversationInfo, ConversationsItemProps } from '../interface';
 import './index.scss';
 
+const prefixCls = 'dtc__conversations';
 const Item: React.FC<ConversationsItemProps> = (props) => {
-    const { info, active, prefixCls, dropdown, onClick } = props;
+    const { info, active, dropdown, onClick } = props;
 
     const { disabled } = info;
     const { triggerDom } = dropdown || {};
@@ -22,7 +23,7 @@ const Item: React.FC<ConversationsItemProps> = (props) => {
     };
     const renderMenuTrigger = (conversation: ConversationInfo) => {
         const originTriggerNode = (
-            <MoreOutlined onClick={stopPropagation} className={`${prefixCls}-menu-icon`} />
+            <MoreOutlined onClick={stopPropagation} className={`${prefixCls}__menu__icon`} />
         );
         if (triggerDom) {
             return typeof triggerDom === 'function'
@@ -34,14 +35,14 @@ const Item: React.FC<ConversationsItemProps> = (props) => {
     return (
         <div
             className={classNames(
-                `${prefixCls}-item`,
-                active && !disabled && `${prefixCls}-item--active`,
-                disabled && `${prefixCls}-item--disabled`
+                `${prefixCls}__item`,
+                active && !disabled && `${prefixCls}__item--active`,
+                disabled && `${prefixCls}__item--disabled`
             )}
             onClick={handleClick}
         >
-            {info.icon && <div className={`${prefixCls}-item-icon`}>{info.icon}</div>}
-            <div className={`${prefixCls}-item-title`}>
+            {info.icon && <div className={`${prefixCls}__item__icon`}>{info.icon}</div>}
+            <div className={`${prefixCls}__item__title`}>
                 <EllipsisText
                     watchParentSizeChange
                     value={info.title}

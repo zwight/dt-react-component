@@ -1,4 +1,4 @@
-.dtc-conversations-item {
+.dtc__conversations__item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,17 +8,17 @@
     border-radius: 4px;
     cursor: pointer;
     color: #3D446E;
-    &-title {
+    &__title {
         flex: 1;
         overflow: hidden;
     }
     &:hover {
         background-color: #EBECF0;
-        .dtc-conversations-menu-icon {
+        .dtc__conversations__menu__icon {
             display: block;
         }
     }
-    .dtc-conversations-menu-icon {
+    .dtc__conversations__menu__icon {
         display: none;
     }
     &--active, &--active:hover {

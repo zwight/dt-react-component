@@ -84,17 +84,17 @@ describe('Test Chat Conversations', () => {
     it('Should loading', () => {
         const { container } = render(<Conversations conversations={[]} loading />);
 
-        const ele = container.querySelector('.dtc-conversations-wrapper')?.children[0];
+        const ele = container.querySelector('.dtc__conversations__wrapper')?.children[0];
         expect(ele).toBeInTheDocument();
-        expect(ele?.className).toContain('dtc-conversations-spin-wrapper');
+        expect(ele?.className).toContain('dtc__conversations__spin__wrapper');
     });
 
     it('Should collapsed', () => {
         const { container } = render(<Conversations conversations={[]} collapsed />);
 
-        const ele = container.querySelector('.dtc-conversations-wrapper');
+        const ele = container.querySelector('.dtc__conversations__wrapper');
         expect(ele).toBeInTheDocument();
-        expect(ele?.className).toContain('dtc-conversations--collapsed');
+        expect(ele?.className).toContain('dtc__conversations--collapsed');
     });
 
     it('Should select item', () => {
@@ -103,9 +103,9 @@ describe('Test Chat Conversations', () => {
             <Conversations conversations={conversation} activeKey={conversation[0].id} />
         );
 
-        const ele = container.querySelector('.dtc-conversations-item');
+        const ele = container.querySelector('.dtc__conversations__item');
         expect(ele).toBeInTheDocument();
-        expect(ele?.className).toContain('dtc-conversations-item--active');
+        expect(ele?.className).toContain('dtc__conversations__item--active');
     });
 
     it('Should group list title', () => {
@@ -113,7 +113,7 @@ describe('Test Chat Conversations', () => {
             <Conversations conversations={generateConversation()} groupable />
         );
 
-        const ele = container.querySelectorAll('.dtc-conversations-title');
+        const ele = container.querySelectorAll('.dtc__conversations__title');
         expect(ele).toHaveLength(2);
     });
 
@@ -166,7 +166,7 @@ describe('Test Chat Conversations', () => {
             />
         );
 
-        const nodeList = container.querySelectorAll<HTMLDivElement>('.dtc-conversations-item');
+        const nodeList = container.querySelectorAll<HTMLDivElement>('.dtc__conversations__item');
         const ele = nodeList?.item(nodeList?.length - 1);
 
         expect(onItemClick).not.toBeCalled();

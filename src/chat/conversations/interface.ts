@@ -70,7 +70,6 @@ export interface ConversationsItemProps extends Omit<HTMLAttributes<HTMLLIElemen
                   info: { originNode: React.ReactNode }
               ) => React.ReactNode);
     };
-    prefixCls?: string;
     onClick?: (info: ConversationInfo) => void;
 }
 

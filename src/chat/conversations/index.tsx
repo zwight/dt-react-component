@@ -10,7 +10,7 @@ import { ConversationInfo, ConversationsProps } from './interface';
 import Item from './item';
 import './index.scss';
 
-const prefixCls = 'dtc-conversations';
+const prefixCls = 'dtc__conversations';
 const Conversations = (props: ConversationsProps) => {
     const {
         conversations,
@@ -47,7 +47,7 @@ const Conversations = (props: ConversationsProps) => {
 
     const renderConversations = () => {
         if (loading) {
-            return <Spin className={`${prefixCls}-spin-wrapper`} />;
+            return <Spin className={`${prefixCls}__spin__wrapper`} />;
         }
         if (!groupList?.length) {
             return (
@@ -68,7 +68,6 @@ const Conversations = (props: ConversationsProps) => {
                             return renderItem({
                                 info: conversation,
                                 active: conversation.id === value,
-                                prefixCls,
                                 onClick: handleItemClick,
                                 dropdown: dropdownVal,
                             });
@@ -79,7 +78,6 @@ const Conversations = (props: ConversationsProps) => {
                                 info={conversation}
                                 active={conversation.id === value}
                                 onClick={handleItemClick}
-                                prefixCls={prefixCls}
                                 dropdown={dropdownVal}
                             />
                         );
@@ -92,7 +90,7 @@ const Conversations = (props: ConversationsProps) => {
                                         {group.name}
                                     </GroupTitle>
                                 )}
-                                <ul className={`${prefixCls}-list`}>{items}</ul>
+                                <ul className={`${prefixCls}__list`}>{items}</ul>
                             </li>
                         );
                     }
@@ -110,7 +108,7 @@ const Conversations = (props: ConversationsProps) => {
     return (
         <div
             className={classNames(
-                `${prefixCls}-wrapper`,
+                `${prefixCls}__wrapper`,
                 collapsed && `${prefixCls}--collapsed`,
                 isHide && !collapsed && `${prefixCls}--hide`,
                 className

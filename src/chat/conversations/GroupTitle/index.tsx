@@ -5,9 +5,9 @@ import { GroupTitleProps } from '../interface';
 import './index.scss';
 
 const GroupTitle: React.FC<GroupTitleProps> = (props) => {
-    const { prefixCls = 'dtc-conversations' } = props;
+    const { prefixCls = 'dtc__conversations' } = props;
     return (
-        <div className={`${prefixCls}-title`}>
+        <div className={`${prefixCls}__title`}>
             {props.children && (
                 <EllipsisText
                     value={props.children}

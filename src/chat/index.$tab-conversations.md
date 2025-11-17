@@ -35,10 +35,9 @@ Conversations 组件用于展示会话列表
 
 ## ConversationsItemProps
 
-| 参数      | 说明     | 类型                                                                                                                                               | 默认值              |
-| --------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- |
-| info      | 对话数据 | `ConversationInfo[]`                                                                                                                               | -                   |
-| active    | 是否激活 | `boolean`                                                                                                                                          | -                   |
-| dropdown  | 下拉菜单 | `DropdownProps & { triggerDom?: React.ReactNode \| ((conversation: ConversationInfo, info: { originNode: React.ReactNode }) => React.ReactNode) }` | -                   |
-| prefixCls | 前缀     | `string`                                                                                                                                           | `dtc-conversations` |
-| onClick   | 点击事件 | `(conversation: ConversationInfo) => void`                                                                                                         | -                   |
+| 参数     | 说明     | 类型                                                                                                                                               | 默认值 |
+| -------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| info     | 对话数据 | `ConversationInfo[]`                                                                                                                               | -      |
+| active   | 是否激活 | `boolean`                                                                                                                                          | -      |
+| dropdown | 下拉菜单 | `DropdownProps & { triggerDom?: React.ReactNode \| ((conversation: ConversationInfo, info: { originNode: React.ReactNode }) => React.ReactNode) }` | -      |
+| onClick  | 点击事件 | `(conversation: ConversationInfo) => void`                                                                                                         | -      |
