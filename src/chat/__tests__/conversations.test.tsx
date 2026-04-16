@@ -86,7 +86,7 @@ describe('Test Chat Conversations', () => {
 
         const ele = container.querySelector('.dtc__conversations__wrapper')?.children[0];
         expect(ele).toBeInTheDocument();
-        expect(ele?.className).toContain('dtc__conversations__spin__wrapper');
+        expect(ele?.className).toContain('dtc__conversations__container');
     });
 
     it('Should collapsed', () => {

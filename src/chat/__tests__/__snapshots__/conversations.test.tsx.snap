@@ -5,9 +5,13 @@ exports[`Test Chat Conversations Match snapshot 1`] = `
   <div
     class="dtc__conversations__wrapper dtc__conversations--collapsed"
   >
-    <ul
-      class="dtc__conversations"
-    />
+    <div
+      class="dtc__conversations__container"
+    >
+      <ul
+        class="dtc__conversations"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -17,9 +21,13 @@ exports[`Test Chat Conversations Match snapshot: collapsed 1`] = `
   <div
     class="dtc__conversations__wrapper dtc__conversations--collapsed"
   >
-    <ul
-      class="dtc__conversations"
-    />
+    <div
+      class="dtc__conversations__container"
+    >
+      <ul
+        class="dtc__conversations"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -29,66 +37,70 @@ exports[`Test Chat Conversations Match snapshot: groupable 1`] = `
   <div
     class="dtc__conversations__wrapper dtc__conversations--collapsed"
   >
-    <ul
-      class="dtc__conversations"
+    <div
+      class="dtc__conversations__container"
     >
-      <li>
-        <div
-          class="dtc__conversations__title"
-        >
+      <ul
+        class="dtc__conversations"
+      >
+        <li>
           <div
-            data-testid="ellipsisText"
-          >
-            昨天
-          </div>
-        </div>
-        <ul
-          class="dtc__conversations__list"
-        >
-          <div
-            class="dtc__conversations__item"
+            class="dtc__conversations__title"
           >
             <div
-              class="dtc__conversations__item__title"
+              data-testid="ellipsisText"
             >
-              <div
-                data-testid="ellipsisText"
-              >
-                this is conversation 1
-              </div>
+              昨天
             </div>
           </div>
-        </ul>
-      </li>
-      <li>
-        <div
-          class="dtc__conversations__title"
-        >
-          <div
-            data-testid="ellipsisText"
-          >
-            今天
-          </div>
-        </div>
-        <ul
-          class="dtc__conversations__list"
-        >
-          <div
-            class="dtc__conversations__item"
+          <ul
+            class="dtc__conversations__list"
           >
             <div
-              class="dtc__conversations__item__title"
+              class="dtc__conversations__item"
             >
               <div
-                data-testid="ellipsisText"
+                class="dtc__conversations__item__title"
               >
-                this is conversation 2
+                <div
+                  data-testid="ellipsisText"
+                >
+                  this is conversation 1
+                </div>
               </div>
             </div>
+          </ul>
+        </li>
+        <li>
+          <div
+            class="dtc__conversations__title"
+          >
+            <div
+              data-testid="ellipsisText"
+            >
+              今天
+            </div>
           </div>
-        </ul>
-      </li>
-    </ul>
+          <ul
+            class="dtc__conversations__list"
+          >
+            <div
+              class="dtc__conversations__item"
+            >
+              <div
+                class="dtc__conversations__item__title"
+              >
+                <div
+                  data-testid="ellipsisText"
+                >
+                  this is conversation 2
+                </div>
+              </div>
+            </div>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -112,9 +124,13 @@ exports[`Test Chat Conversations Match snapshot: handleCreateChat 1`] = `
         开启新对话
       </span>
     </button>
-    <ul
-      class="dtc__conversations"
-    />
+    <div
+      class="dtc__conversations__container"
+    >
+      <ul
+        class="dtc__conversations"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -125,26 +141,30 @@ exports[`Test Chat Conversations Match snapshot: loading 1`] = `
     class="dtc__conversations__wrapper dtc__conversations--collapsed"
   >
     <div
-      aria-busy="true"
-      aria-live="polite"
-      class="ant-spin ant-spin-spinning dtc__conversations__spin__wrapper"
+      class="dtc__conversations__container"
     >
-      <span
-        class="ant-spin-dot ant-spin-dot-spin"
+      <div
+        aria-busy="true"
+        aria-live="polite"
+        class="ant-spin ant-spin-spinning dtc__conversations__spin__wrapper"
       >
-        <i
-          class="ant-spin-dot-item"
-        />
-        <i
-          class="ant-spin-dot-item"
-        />
-        <i
-          class="ant-spin-dot-item"
-        />
-        <i
-          class="ant-spin-dot-item"
-        />
-      </span>
+        <span
+          class="ant-spin-dot ant-spin-dot-spin"
+        >
+          <i
+            class="ant-spin-dot-item"
+          />
+          <i
+            class="ant-spin-dot-item"
+          />
+          <i
+            class="ant-spin-dot-item"
+          />
+          <i
+            class="ant-spin-dot-item"
+          />
+        </span>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -155,36 +175,40 @@ exports[`Test Chat Conversations Match snapshot: normal 1`] = `
   <div
     class="dtc__conversations__wrapper dtc__conversations--collapsed"
   >
-    <ul
-      class="dtc__conversations"
+    <div
+      class="dtc__conversations__container"
     >
-      <div
-        class="dtc__conversations__item"
+      <ul
+        class="dtc__conversations"
       >
         <div
-          class="dtc__conversations__item__title"
+          class="dtc__conversations__item"
         >
           <div
-            data-testid="ellipsisText"
+            class="dtc__conversations__item__title"
           >
-            this is conversation 1
+            <div
+              data-testid="ellipsisText"
+            >
+              this is conversation 1
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="dtc__conversations__item"
-      >
         <div
-          class="dtc__conversations__item__title"
+          class="dtc__conversations__item"
         >
           <div
-            data-testid="ellipsisText"
+            class="dtc__conversations__item__title"
           >
-            this is conversation 2
+            <div
+              data-testid="ellipsisText"
+            >
+              this is conversation 2
+            </div>
           </div>
         </div>
-      </div>
-    </ul>
+      </ul>
+    </div>
   </div>
 </DocumentFragment>
 `;
@@ -194,9 +218,13 @@ exports[`Test Chat Conversations Match snapshot: select 1`] = `
   <div
     class="dtc__conversations__wrapper dtc__conversations--collapsed"
   >
-    <ul
-      class="dtc__conversations"
-    />
+    <div
+      class="dtc__conversations__container"
+    >
+      <ul
+        class="dtc__conversations"
+      />
+    </div>
   </div>
 </DocumentFragment>
 `;
