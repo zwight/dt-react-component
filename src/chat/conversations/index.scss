@@ -8,7 +8,6 @@
     padding: 0 16px;
     list-style: none;
     overflow-y: auto;
-    flex: 1;
     &--empty {
         margin-top: 50%;
     }
@@ -29,6 +28,10 @@
         width: 0;
         height: 100%;
         transition: width 0.3s ease;
+        overflow: hidden;
+    }
+    &__container {
+        flex: 1;
         overflow: hidden;
     }
     &--collapsed {

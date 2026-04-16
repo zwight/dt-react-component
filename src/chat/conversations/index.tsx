@@ -20,9 +20,9 @@ const Conversations = (props: ConversationsProps) => {
         groupable,
         className,
         style,
-
         loading,
         header,
+        footer,
         collapsed = true,
         onItemClick,
         renderItem,
@@ -119,7 +119,8 @@ const Conversations = (props: ConversationsProps) => {
             }}
         >
             {header}
-            {renderConversations()}
+            <div className={`${prefixCls}__container`}>{renderConversations()}</div>
+            {footer}
         </div>
     );
 };

@@ -39,8 +39,10 @@ export interface ConversationsProps extends React.HTMLAttributes<HTMLUListElemen
     className?: string;
     style?: React.CSSProperties;
     loading?: boolean;
-    /** 列表头部区域内容（false 表示不展示） */
-    header?: React.ReactNode | boolean;
+    /** 列表头部区域内容 */
+    header?: React.ReactNode;
+    /** 列表底部区域内容 */
+    footer?: React.ReactNode;
     /** 是否为折叠状态（折叠时仅展示图标） */
     collapsed?: boolean;
     /** 点击某条会话时触发 */

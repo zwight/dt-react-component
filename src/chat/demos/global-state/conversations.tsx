@@ -166,6 +166,7 @@ export default function () {
                                 开启新对话
                             </Chat.Button>
                         }
+                        footer={<div style={{ textAlign: 'center' }}>底部内容</div>}
                         style={{
                             backgroundColor: '#F9F9FA',
                             borderRight: '1px solid #E5E7EB',
