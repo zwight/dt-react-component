@@ -104,7 +104,7 @@ describe('test cookies', () => {
         });
     });
 
-    test('should trigger with prevCookies and nextCookies when change cookie with empty watchfields', () => {
+    test('should trigger with prevValue and nextValue when change cookie with empty watchfields', () => {
         const mockCookiesChanged = jest.fn();
         const timeout = 200;
 
@@ -117,8 +117,11 @@ describe('test cookies', () => {
             setTimeout(() => {
                 expect(mockCookiesChanged.mock.calls).toHaveLength(1);
                 expect(mockCookiesChanged).toBeCalledWith({
-                    prevCookies: '',
-                    nextCookies: 'dt_token=token1; dt_userId=123',
+                    prevValue: {},
+                    nextValue: {
+                        dt_token: 'token1',
+                        dt_userId: '123',
+                    },
                 });
                 resolve(true);
             }, timeout);
@@ -144,12 +147,21 @@ describe('test cookies', () => {
             setTimeout(() => {
                 expect(mockCookiesChanged.mock.calls).toHaveLength(2);
                 expect(mockCookiesChanged.mock.calls[0][0]).toEqual({
-                    prevCookies: '',
-                    nextCookies: 'dt_token=token1; dt_userId=123',
+                    prevValue: {},
+                    nextValue: {
+                        dt_token: 'token1',
+                        dt_userId: '123',
+                    },
                 });
                 expect(mockCookiesChanged.mock.calls[1][0]).toEqual({
-                    prevCookies: 'dt_token=token1; dt_userId=123',
-                    nextCookies: 'dt_token=token2; dt_userId=1234',
+                    prevValue: {
+                        dt_token: 'token1',
+                        dt_userId: '123',
+                    },
+                    nextValue: {
+                        dt_token: 'token2',
+                        dt_userId: '1234',
+                    },
                 });
                 resolve(true);
             }, 2 * timeout);

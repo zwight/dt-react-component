@@ -187,7 +187,9 @@ describe('Test Chat Message', () => {
         act(() => {
             fireEvent.click(ele!);
         });
-        expect(onCopy).toBeCalledWith('My Name is dt-react-component');
+        await waitFor(() => {
+            expect(onCopy).toBeCalledWith('My Name is dt-react-component');
+        });
         rerender(<Message prompt={prompt} data={prompt.messages} copy={false} />);
         expect(container.querySelector(classNames)).toBeNull();
 
@@ -202,7 +204,9 @@ describe('Test Chat Message', () => {
         act(() => {
             fireEvent.click(container.querySelector(classNames)!);
         });
-        expect(onCopy).toBeCalledWith('My Name is dt-react-component jest');
+        await waitFor(() => {
+            expect(onCopy).toBeCalledWith('My Name is dt-react-component jest');
+        });
     });
 
     it('Should support render message icons', () => {

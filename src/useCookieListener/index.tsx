@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Cookie } from '@dtinsight/dt-utils';
+import { isEqual } from 'lodash-es';
 
 export interface Fields {
     key: string;
@@ -16,10 +17,23 @@ const defaultOptions: ICookieOptions = {
 };
 
 type CompareCookieHandler = (params: {
-    prevCookies: string;
-    nextCookies: string;
+    prevValue: Record<string, string>;
+    nextValue: Record<string, string>;
     changedFields?: Fields[];
 }) => void;
+
+const getWatchFieldsValue = (watchFields: string[]) => {
+    const result: Record<string, string> = {};
+    if (!watchFields.length) {
+        return Cookie.get();
+    }
+    for (let i = 0; i < watchFields.length; i++) {
+        const key = watchFields[i];
+        const value = Cookie.get(key);
+        result[key] = value;
+    }
+    return result;
+};
 
 const useCookieListener = (
     handler: CompareCookieHandler,
@@ -29,7 +43,9 @@ const useCookieListener = (
     const { timeout, immediately } = options;
     const isWatchAll = !watchFields.length;
     const timerRef = useRef<number>();
-    const currentCookiesRef = useRef<string>(document.cookie);
+    const currentCookiesRef = useRef<Record<(typeof watchFields)[number], string>>(
+        getWatchFieldsValue(watchFields)
+    );
     const handlerRef = useRef<CompareCookieHandler>();
     handlerRef.current = handler;
 
@@ -42,30 +58,31 @@ const useCookieListener = (
         };
     }, []);
 
-    const handleFieldsChange = (prevCookies: string, nextCookies: string) => {
+    const handleFieldsChange = (
+        prevValue: Record<string, string>,
+        nextValue: Record<string, string>
+    ) => {
         const changedFields: Fields[] = [];
         for (let i = 0; i < watchFields.length; i++) {
             const key = watchFields[i];
-            const originValue = Cookie.getCookie(key, prevCookies);
-            const newValue = Cookie.getCookie(key, nextCookies);
-            if (
-                (originValue !== null || (originValue === null && immediately)) &&
-                originValue !== newValue
-            ) {
-                changedFields.push({ key, value: newValue });
-            }
+            const originValue = prevValue[key];
+            const newValue = nextValue[key];
+            if (originValue === newValue) continue;
+            if (originValue === null && !immediately) continue;
+            changedFields.push({ key, value: newValue });
         }
-        changedFields.length && handlerRef.current?.({ changedFields, prevCookies, nextCookies });
+        if (!changedFields.length) return;
+        handlerRef.current?.({ changedFields, prevValue, nextValue });
     };
 
     const compareValue = () => {
-        const prevCookies = currentCookiesRef.current;
-        const nextCookies = document.cookie;
-        if (prevCookies !== nextCookies) {
+        const prevValue = currentCookiesRef.current;
+        const nextValue = getWatchFieldsValue(watchFields);
+        if (!isEqual(prevValue, nextValue)) {
             isWatchAll
-                ? handlerRef.current?.({ prevCookies, nextCookies })
-                : handleFieldsChange(prevCookies, nextCookies);
-            currentCookiesRef.current = nextCookies;
+                ? handlerRef.current?.({ prevValue, nextValue })
+                : handleFieldsChange(prevValue, nextValue);
+            currentCookiesRef.current = nextValue;
         }
     };
 };

@@ -1,5 +1,5 @@
 import React, { CSSProperties, ReactNode } from 'react';
-import { CopyUtils } from '@dtinsight/dt-utils';
+import { copy } from '@dtinsight/dt-utils';
 import { CopyOutlined } from '@dtinsight/react-icons';
 import { message, Tooltip } from 'antd';
 import classNames from 'classnames';
@@ -30,9 +30,10 @@ const Copy: React.FC<ICopyProps> = (props) => {
         onCopy = () => message.success(locale.copied),
     } = props;
 
-    const handleCopy = () => {
+    const handleCopy = async () => {
         if (disabled) return;
-        new CopyUtils().copy(text, () => onCopy(text));
+        await copy(text);
+        onCopy(text);
     };
 
     const renderCopyButton = () => (

@@ -14,5 +14,6 @@ module.exports = {
         '^lodash-es$': 'lodash',
         'react-markdown': '<rootDir>/node_modules/react-markdown/react-markdown.min.js',
         '@dtinsight/react-icons': '<rootDir>/tests/iconMock.js',
+        '@dtinsight/dt-utils': '<rootDir>/tests/dtUtilsMock.js',
     },
 };

@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
-import { CopyUtils } from '@dtinsight/dt-utils';
+import { copy } from '@dtinsight/dt-utils';
 import type { HotTableProps } from '@handsontable/react';
 import { HotTable } from '@handsontable/react';
 import classNames from 'classnames';
@@ -34,7 +34,6 @@ export interface ISpreadSheetProps {
 const SpreadSheet: React.FC<ISpreadSheetProps> = forwardRef(
     ({ data, columns = [], className, options, columnTypes = [] }, ref) => {
         const tableRef = useRef<any>(null);
-        const copyUtils = new CopyUtils();
         const _timer = useRef<NodeJS.Timeout>();
         const { copyTypes = [], ...restProps } = options || {};
 
@@ -83,14 +82,14 @@ const SpreadSheet: React.FC<ISpreadSheetProps> = forwardRef(
         /**
          * 去除格式化
          */
-        const beforeCopy = (arr: Array<Array<any>>) => {
+        const beforeCopy = async (arr: Array<Array<any>>) => {
             const value = arr
                 .map((row: any[]) => {
                     return row.join('\t');
                 })
                 .join('\n');
 
-            copyUtils.copy(value);
+            await copy(value);
             return false;
         };
 

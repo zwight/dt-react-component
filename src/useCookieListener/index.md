@@ -23,20 +23,24 @@ demo:
 
 ```tsx | pure
 useCookieListener(
-    handler: (params: {prevCookies: string, nextCookies: string, changedFields?: Fields[]}) => void,
+    handler: (params: {
+        prevValue: Record<string, string>,
+        nextValue: Record<string, string>,
+        changedFields?: Fields[],
+    }) => void,
     watchFields: string[],
-    options?: ICookieOptions
+    options?: ICookieOptions,
 )
 
 ```
 
 ### Params
 
-| 参数        | 说明                    | 类型                                                                                     | 默认值 |
-| ----------- | ----------------------- | ---------------------------------------------------------------------------------------- | ------ |
-| handler     | Cookie 变化时的处理函数 | `(params: {prevCookies: string, nextCookies: string, changedFields?: Fields[]}) => void` | -      |
-| watchFields | 监听的具体 Cookie 字段  | `stirng[]`                                                                               | -      |
-| options     | 配置项                  | `CookieOptions`                                                                          | -      |
+| 参数        | 说明                    | 类型                                                                                                                 | 默认值 |
+| ----------- | ----------------------- | -------------------------------------------------------------------------------------------------------------------- | ------ |
+| handler     | Cookie 变化时的处理函数 | `(params: {prevValue: Record<string, string>, nextValue: Record<string, string>, changedFields?: Fields[]}) => void` | -      |
+| watchFields | 监听的具体 Cookie 字段  | `stirng[]`                                                                                                           | -      |
+| options     | 配置项                  | `CookieOptions`                                                                                                      | -      |
 
 ### CookieOptions
 

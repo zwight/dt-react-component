@@ -5,8 +5,9 @@ import { useCookieListener } from 'dt-react-component';
 
 export default () => {
     useEffect(() => {
-        Cookie.deleteCookie('dt_token');
-        Cookie.deleteCookie('dt_userid');
+        console.log(Cookie);
+        Cookie.remove('dt_token');
+        Cookie.remove('dt_userid');
         return () => Cookie.deleteAllCookies('', '');
     }, []);
 
@@ -23,8 +24,10 @@ export default () => {
         ['dt_token']
     );
 
-    useCookieListener(({ prevCookies, nextCookies }) => {
-        message.info(`监听到Cookie从 ${prevCookies} 变更为了 ${nextCookies} `);
+    useCookieListener(({ prevValue, nextValue }) => {
+        message.info(
+            `监听到Cookie从 ${JSON.stringify(prevValue)} 变更为了 ${JSON.stringify(nextValue)} `
+        );
     }, []);
 
     return (
@@ -32,8 +35,8 @@ export default () => {
             <p>
                 <Button
                     onClick={() => {
-                        Cookie.setCookie('dt_token', `im_new_token_${Date.now()}`);
-                        Cookie.setCookie('dt_userid', `im_new_userid_${Date.now()}`);
+                        Cookie.set('dt_token', `im_new_token_${Date.now()}`);
+                        Cookie.set('dt_userid', `im_new_userid_${Date.now()}`);
                     }}
                 >
                     修改Cookie值

@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent, render } from '@testing-library/react';
+import { cleanup, fireEvent, render, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom/extend-expect';
 
@@ -12,7 +12,7 @@ describe('test Copy', () => {
         cleanup();
     });
 
-    it('should copy text to clipboard on click', () => {
+    it('should copy text to clipboard on click', async () => {
         const user = userEvent.setup({ writeToClipboard: true });
         const mockCopy = jest.fn();
         const { container } = render(<Copy text={mockText} onCopy={(text) => mockCopy(text)} />);
@@ -21,7 +21,9 @@ describe('test Copy', () => {
         expect(button).toBeInTheDocument();
 
         fireEvent.click(button!);
-        expect(mockCopy).toHaveBeenCalledWith(mockText);
+        await waitFor(() => {
+            expect(mockCopy).toHaveBeenCalledWith(mockText);
+        });
         user.paste().then((value) => {
             expect(value).toEqual(mockText);
         });
