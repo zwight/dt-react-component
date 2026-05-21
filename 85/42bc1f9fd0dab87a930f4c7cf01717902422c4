@@ -1,0 +1,58 @@
+src/spreadSheet/index.tsx
+  h_be914e06ac2555 2,85,92
+src/form/table.tsx
+  h_be914e06ac2555 177
+tests/dtUtilsMock.js
+  h_be914e06ac2555 1-2,15-18
+  s_b26cf1ed22ed92::t_21539ba60d7194 3-14,19-26
+src/useCookieListener/index.tsx
+  h_be914e06ac2555 3,28-30,33-37,47,81
+  s_b26cf1ed22ed92::t_614094a21c5eb4 70-72,74-75
+src/useCookieListener/demos/advanced.tsx
+  h_be914e06ac2555 8,31
+src/copy/index.tsx
+  s_c641c92ed70fe3::t_eb69fd3324426c 36
+  h_be914e06ac2555 2,33,35
+src/chat/__tests__/message.test.tsx
+  h_be914e06ac2555 190
+  s_c641c92ed70fe3::t_c7830a645d1725 191-192,207-208
+src/useCookieListener/demos/basic.tsx
+  h_be914e06ac2555 8-10,27-28
+src/useCookieListener/index.md
+  h_be914e06ac2555 27-29,32,41
+jest.config.js
+  h_be914e06ac2555 17
+src/useCookieListener/__tests__/useCookieListener.test.tsx
+  s_b26cf1ed22ed92::t_a3b59aeb9fa37b 107,120-124,150-154,157-164
+src/copy/__tests__/copy.test.tsx
+  h_be914e06ac2555 2,15,24-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "8542bc1f9fd0dab87a930f4c7cf01717902422c4",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_b26cf1ed22ed92": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e4933-eaa2-7570-b136-4bf7e62afb54",
+        "model": "gpt-5.5"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    },
+    "s_c641c92ed70fe3": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019e4846-637f-74b3-a6e1-39e7da28c949",
+        "model": "gpt-5.3-codex"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
