@@ -6,7 +6,7 @@ import { useCookieListener } from 'dt-react-component';
 export default () => {
     useEffect(() => {
         Cookie.remove('dt_token');
-        return () => Cookie.deleteAllCookies('', '');
+        return () => Cookie.remove('dt_token');
     }, []);
 
     useCookieListener(

@@ -8,7 +8,10 @@ export default () => {
         console.log(Cookie);
         Cookie.remove('dt_token');
         Cookie.remove('dt_userid');
-        return () => Cookie.deleteAllCookies('', '');
+        return () => {
+            Cookie.remove('dt_token');
+            Cookie.remove('dt_userid');
+        };
     }, []);
 
     useCookieListener(
