@@ -64,6 +64,9 @@ const useGroupable = (
 export function classifyDate(locale: Locale['Chat'], date?: string | Date | number) {
     const input = dayjs(date).startOf('day');
     const now = dayjs().startOf('day');
+    if (!date || !input.isValid()) {
+        return locale.other;
+    }
 
     const diffDays = now.diff(input, 'days');
 
