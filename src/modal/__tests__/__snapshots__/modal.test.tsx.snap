@@ -74,8 +74,16 @@ exports[`Test Modal Component Should Match snapshot 1`] = `
             <section
               class="dtc-modal-body"
             >
-              <div>
-                test
+              <div
+                class="ant-spin-nested-loading"
+              >
+                <div
+                  class="ant-spin-container"
+                >
+                  <div>
+                    test
+                  </div>
+                </div>
               </div>
             </section>
           </div>
@@ -189,7 +197,15 @@ exports[`Test Modal Component Should support banner Should match snapshot for dr
               <section
                 class="dtc-modal-body"
               >
-                test
+                <div
+                  class="ant-spin-nested-loading"
+                >
+                  <div
+                    class="ant-spin-container"
+                  >
+                    test
+                  </div>
+                </div>
               </section>
             </div>
             <div
@@ -299,7 +315,15 @@ exports[`Test Modal Component Should support banner Should match snapshot for re
             <section
               class="dtc-modal-body"
             >
-              test
+              <div
+                class="ant-spin-nested-loading"
+              >
+                <div
+                  class="ant-spin-container"
+                >
+                  test
+                </div>
+              </div>
             </section>
           </div>
           <div

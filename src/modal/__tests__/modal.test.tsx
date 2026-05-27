@@ -162,6 +162,26 @@ describe('Test Modal Component', () => {
             expect(asFragment()).toMatchSnapshot();
         });
 
+        it('Should render Spin correct', () => {
+            const { container } = render(
+                <Modal visible title="title" getContainer={false} loading>
+                    test
+                </Modal>
+            );
+            const spin = modal.query(container)!.querySelector<HTMLDivElement>('.ant-spin-blur')!;
+            expect(spin).toBeTruthy();
+        });
+
+        it('Should render no Spin correct', () => {
+            const { container } = render(
+                <Modal visible title="title" getContainer={false} loading={false}>
+                    test
+                </Modal>
+            );
+            const spin = modal.query(container)!.querySelector<HTMLDivElement>('.ant-spin-blur')!;
+            expect(spin).toBeFalsy();
+        });
+
         it('Should call onRectChange for resizable modal', () => {
             const onRectChange = jest.fn();
             const { container } = render(
