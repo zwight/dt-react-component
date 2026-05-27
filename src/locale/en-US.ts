@@ -34,6 +34,8 @@ const localeValues: Locale = {
     },
     FilterRules: {
         message: 'Must have one data item',
+        and: 'And',
+        or: 'Or',
     },
     Fullscreen: {
         exitFull: 'Exit Full Screen',

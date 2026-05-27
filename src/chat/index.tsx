@@ -11,6 +11,7 @@ import Message from './message';
 import Pagination from './pagination';
 import Prompt from './prompt';
 import Tag from './tag';
+import Think from './think';
 import useChat from './useChat';
 import { context, type IChatContext, useContext } from './useContext';
 import Welcome from './welcome';
@@ -22,7 +23,25 @@ const DEFAULT_MAX_REGENERATE_COUNT = 5;
 type ChatProviderConfig = Omit<IChatProps, 'maxRegenerateCount'> &
     Partial<Pick<IChatProps, 'maxRegenerateCount'>>;
 
-function Chat({
+type ChatComponent = React.FC<PropsWithChildren<ChatProviderConfig>> & {
+    useChat: typeof useChat;
+    useContext: typeof useContext;
+    Loading: typeof Loading;
+    Button: typeof Button;
+    CodeBlock: typeof CodeBlock;
+    Input: typeof Input;
+    Markdown: typeof Markdown;
+    Pagination: typeof Pagination;
+    Message: typeof Message;
+    Prompt: typeof Prompt;
+    Content: typeof Content;
+    Tag: typeof Tag;
+    Welcome: typeof Welcome;
+    Conversations: typeof Conversations;
+    Think: typeof Think;
+};
+
+const Chat: ChatComponent = function Chat({
     chat,
     components,
     maxRegenerateCount = DEFAULT_MAX_REGENERATE_COUNT,
@@ -32,6 +51,8 @@ function Chat({
     messageIcons,
     rehypePlugins,
     remarkPlugins,
+    messageHeader,
+    promptFooter,
     children,
 }: PropsWithChildren<ChatProviderConfig>) {
     return (
@@ -46,16 +67,17 @@ function Chat({
                 regenerate,
                 rehypePlugins,
                 remarkPlugins,
+                messageHeader,
+                promptFooter,
             }}
         >
             {children}
         </context.Provider>
     );
-}
+};
 
 Chat.useChat = useChat;
 Chat.useContext = useContext;
-
 Chat.Loading = Loading;
 Chat.Button = Button;
 Chat.CodeBlock = CodeBlock;
@@ -68,6 +90,7 @@ Chat.Content = Content;
 Chat.Tag = Tag;
 Chat.Welcome = Welcome;
 Chat.Conversations = Conversations;
+Chat.Think = Think;
 
 export { type IContentRef } from './content';
 export default Chat;
