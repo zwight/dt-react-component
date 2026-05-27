@@ -3,6 +3,7 @@ import React, { type PropsWithChildren } from 'react';
 import Button from './button';
 import CodeBlock from './codeBlock';
 import Content from './content';
+import Conversations from './conversations';
 import Input from './input';
 import Loading from './loading';
 import Markdown from './markdown';
@@ -36,6 +37,7 @@ type ChatComponent = React.FC<PropsWithChildren<ChatProviderConfig>> & {
     Content: typeof Content;
     Tag: typeof Tag;
     Welcome: typeof Welcome;
+    Conversations: typeof Conversations;
     Think: typeof Think;
 };
 
@@ -87,6 +89,7 @@ Chat.Prompt = Prompt;
 Chat.Content = Content;
 Chat.Tag = Tag;
 Chat.Welcome = Welcome;
+Chat.Conversations = Conversations;
 Chat.Think = Think;
 
 export { type IContentRef } from './content';

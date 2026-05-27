@@ -1,0 +1,44 @@
+.dtc__conversations {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    padding: 0 16px;
+    list-style: none;
+    overflow-y: auto;
+    &--empty {
+        margin-top: 50%;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    &__spin__wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 40px 0;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: 100%;
+        transition: width 0.3s ease;
+        overflow: hidden;
+    }
+    &__container {
+        flex: 1;
+        overflow: hidden;
+    }
+    &--collapsed {
+        width: 240px;
+    }
+    &--hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

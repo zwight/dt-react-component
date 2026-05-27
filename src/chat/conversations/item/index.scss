@@ -1,0 +1,32 @@
+.dtc__conversations__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    gap: 4px;
+    padding: 0 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #3D446E;
+    &__title {
+        flex: 1;
+        overflow: hidden;
+    }
+    &:hover {
+        background-color: #EBECF0;
+        .dtc__conversations__menu__icon {
+            display: block;
+        }
+    }
+    .dtc__conversations__menu__icon {
+        display: none;
+    }
+    &--active, &--active:hover {
+        color: #1D78FF;
+        background-color: #E8F1FF;
+    }
+    &--disabled, &--disabled:hover {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+}
