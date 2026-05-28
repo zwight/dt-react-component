@@ -1,0 +1,14 @@
+tests/dtUtilsMock.js
+  h_be914e06ac2555 26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "1616524022b18dce569a53ea28a1826c114ce85b",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
