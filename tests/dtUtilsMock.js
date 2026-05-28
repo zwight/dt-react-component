@@ -23,4 +23,5 @@ module.exports = {
             return key ? cookieMap[key] || undefined : cookieMap;
         },
     },
+    isEmpty: dtUtils.isEmpty || ((value) => value === null || value === undefined || value === ''),
 };
