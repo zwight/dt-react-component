@@ -1,4 +1,5 @@
 import React, { ReactNode, useMemo } from 'react';
+import { isEmpty } from '@dtinsight/dt-utils/lib';
 import { Form, type FormListFieldData, Table, type TableProps } from 'antd';
 import type { FormItemProps, FormListProps, Rule, RuleObject, RuleRender } from 'antd/lib/form';
 import type { ColumnsType, ColumnType as TableColumnType } from 'antd/lib/table';
@@ -174,7 +175,7 @@ export default function InternalTable({
                     ),
                     render(_, record) {
                         const currentNamePath = [record.name, cols.dataIndex]
-                            .filter((item) => item !== undefined && item !== null && item !== '')
+                            .filter((item) => !isEmpty(item))
                             .flat() as OverrideParameters;
 
                         const rules: Rule[] | undefined = rawRules?.map((rule) =>

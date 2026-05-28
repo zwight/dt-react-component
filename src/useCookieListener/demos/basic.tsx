@@ -5,8 +5,7 @@ import { useCookieListener } from 'dt-react-component';
 
 export default () => {
     useEffect(() => {
-        Cookies.remove('dt_token');
-        Cookies.remove('dt_userid');
+        Cookies.remove(['dt_token', 'dt_userid']);
         return () => {
             Cookies.clear();
         };
@@ -36,8 +35,10 @@ export default () => {
             <p>
                 <Button
                     onClick={() => {
-                        Cookies.set('dt_token', `im_new_token_${Date.now()}`);
-                        Cookies.set('dt_userid', `im_new_userid_${Date.now()}`);
+                        Cookies.set({
+                            dt_token: `im_new_token_${Date.now()}`,
+                            dt_userid: `im_new_userid_${Date.now()}`,
+                        });
                     }}
                 >
                     修改Cookie值
