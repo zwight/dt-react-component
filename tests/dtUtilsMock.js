@@ -16,11 +16,11 @@ module.exports = {
     ...dtUtils,
     // 如果 copy 在新版本行为有变化，可在这里兜底
     copy: dtUtils.copy || (async () => true),
-    Cookie: {
-        ...dtUtils.Cookie,
+    Cookies: {
+        ...dtUtils.Cookies,
         get: (key) => {
             const cookieMap = getCookieMap();
-            return key ? cookieMap[key] || null : cookieMap;
+            return key ? cookieMap[key] || undefined : cookieMap;
         },
     },
 };

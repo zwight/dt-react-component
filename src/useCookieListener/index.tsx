@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
-import { Cookie } from '@dtinsight/dt-utils';
+import { Cookies } from '@dtinsight/dt-utils';
 import { isEqual } from 'lodash-es';
 
 export interface Fields {
     key: string;
-    value: string | null;
+    value: string | undefined;
 }
 export interface ICookieOptions {
     timeout?: number; // 轮训间隔
@@ -17,19 +17,19 @@ const defaultOptions: ICookieOptions = {
 };
 
 type CompareCookieHandler = (params: {
-    prevValue: Record<string, string>;
-    nextValue: Record<string, string>;
+    prevValue: Record<string, string | undefined>;
+    nextValue: Record<string, string | undefined>;
     changedFields?: Fields[];
 }) => void;
 
 const getWatchFieldsValue = (watchFields: string[]) => {
-    const result: Record<string, string> = {};
+    const result: Record<string, string | undefined> = {};
     if (!watchFields.length) {
-        return Cookie.get();
+        return Cookies.get();
     }
     for (let i = 0; i < watchFields.length; i++) {
         const key = watchFields[i];
-        const value = Cookie.get(key);
+        const value = Cookies.get(key);
         result[key] = value;
     }
     return result;
@@ -43,7 +43,7 @@ const useCookieListener = (
     const { timeout, immediately } = options;
     const isWatchAll = !watchFields.length;
     const timerRef = useRef<number>();
-    const currentCookiesRef = useRef<Record<(typeof watchFields)[number], string>>(
+    const currentCookiesRef = useRef<Record<(typeof watchFields)[number], string | undefined>>(
         getWatchFieldsValue(watchFields)
     );
     const handlerRef = useRef<CompareCookieHandler>();
@@ -59,8 +59,8 @@ const useCookieListener = (
     }, []);
 
     const handleFieldsChange = (
-        prevValue: Record<string, string>,
-        nextValue: Record<string, string>
+        prevValue: Record<string, string | undefined>,
+        nextValue: Record<string, string | undefined>
     ) => {
         const changedFields: Fields[] = [];
         for (let i = 0; i < watchFields.length; i++) {
@@ -68,7 +68,7 @@ const useCookieListener = (
             const originValue = prevValue[key];
             const newValue = nextValue[key];
             if (originValue === newValue) continue;
-            if (originValue === null && !immediately) continue;
+            if (originValue === undefined && !immediately) continue;
             changedFields.push({ key, value: newValue });
         }
         if (!changedFields.length) return;

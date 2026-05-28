@@ -6,7 +6,7 @@ overrides:
 specifiers:
   '@commitlint/cli': ^17.1.2
   '@commitlint/config-conventional': ^17.1.0
-  '@dtinsight/dt-utils': ^2.0.0
+  '@dtinsight/dt-utils': ^2.1.0
   '@dtinsight/react-icons': ^1.0.0
   '@faker-js/faker': ^7.6.0
   '@handsontable/react': 2.1.0
@@ -63,7 +63,7 @@ specifiers:
   typescript: ~4.5.2
 
 dependencies:
-  '@dtinsight/dt-utils': 2.0.0
+  '@dtinsight/dt-utils': 2.1.0
   '@dtinsight/react-icons': 1.2.0
   '@handsontable/react': registry.npmmirror.com/@handsontable/react/2.1.0_handsontable@6.2.2
   antd: registry.npmmirror.com/antd/4.22.5_react-dom@18.2.0+react@18.2.0
@@ -189,8 +189,8 @@ packages:
     dev: true
     optional: true
 
-  /@dtinsight/dt-utils/2.0.0:
-    resolution: {integrity: sha512-E+LvHHhDf5bLrlTZbl6zzhUiko9os5hcgl2R6Df6+TTu48egTHzmeJTzOdLrZQeJYn4RTJSa4Q5YacJ+VRYSDg==}
+  /@dtinsight/dt-utils/2.1.0:
+    resolution: {integrity: sha512-ATFHzbPzS55zeqrcPifPGKPNyJDl6qPqe7hXvpT2Sz9aGXJdO+s65r2nPopSSXnrpNxibACjOzC0ZLBC1WmpmA==}
     dependencies:
       dayjs: 1.11.21
       idb: 8.0.3
