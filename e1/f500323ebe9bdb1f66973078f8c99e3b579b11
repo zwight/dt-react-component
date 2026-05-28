@@ -1,0 +1,22 @@
+src/useCookieListener/demos/basic.tsx
+  h_be914e06ac2555 2,8-9,11,39-40
+package.json
+  h_be914e06ac2555 114
+src/useCookieListener/index.tsx
+  h_be914e06ac2555 2,7,20-21,26,28,32,46,62-63,71
+tests/dtUtilsMock.js
+  h_be914e06ac2555 19-20,23
+src/useCookieListener/demos/advanced.tsx
+  h_be914e06ac2555 2,8-9,31
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "e1f500323ebe9bdb1f66973078f8c99e3b579b11",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
