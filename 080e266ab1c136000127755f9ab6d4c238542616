@@ -1,0 +1,16 @@
+src/useCookieListener/demos/basic.tsx
+  h_be914e06ac2555 11-14
+src/useCookieListener/demos/advanced.tsx
+  h_be914e06ac2555 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "080e266ab1c136000127755f9ab6d4c238542616",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
