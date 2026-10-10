@@ -1,0 +1,14 @@
+.enhanced-select--scroll {
+    .ant-select-selector {
+        max-height: inherit;
+        overflow-y: auto;
+    }
+}
+
+.select-with-scroll-dropdown {
+    .ant-select-item-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
