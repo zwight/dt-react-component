@@ -43,6 +43,7 @@ export { default as TinyTag } from './tinyTag';
 export { default as Tooltip } from './tooltip';
 export { default as useCookieListener } from './useCookieListener';
 export { default as useDebounce } from './useDebounce';
+export { default as useExportPDF } from './useExportPDF';
 export { default as useIntersectionObserver } from './useIntersectionObserver';
 export { default as useList } from './useList';
 export { default as useMeasure } from './useMeasure';

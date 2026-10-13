@@ -2,6 +2,7 @@ import { Locale } from './useLocale';
 
 const localeValues: Locale = {
     locale: 'en-US',
+    useExportPDF: { success: 'Export successful', error: 'Export failed' },
     BlockHeader: {
         expand: 'Expand',
         collapse: 'Collapse',

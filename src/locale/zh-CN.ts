@@ -2,6 +2,7 @@ import { Locale } from './useLocale';
 
 const localeValues: Locale = {
     locale: 'zh-CN',
+    useExportPDF: { success: '导出成功', error: '导出失败' },
     BlockHeader: {
         expand: '展开',
         collapse: '收起',
