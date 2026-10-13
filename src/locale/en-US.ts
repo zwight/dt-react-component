@@ -3,6 +3,7 @@ import { Locale } from './useLocale';
 const localeValues: Locale = {
     locale: 'en-US',
     TagOverflow: { more: 'More' },
+    useExportPDF: { success: 'Export successful', error: 'Export failed' },
     BlockHeader: {
         expand: 'Expand',
         collapse: 'Collapse',

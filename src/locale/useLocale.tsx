@@ -5,6 +5,7 @@ import defaultLocaleData from './zh-CN';
 export interface Locale {
     locale: string;
     TagOverflow: { more: string };
+    useExportPDF: { success: string; error: string };
     BlockHeader: { expand: string; collapse: string };
     Catalogue: { searchPlaceholder: string; inputPlaceholder: string };
     Chat: {
