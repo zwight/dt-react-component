@@ -2,6 +2,7 @@ import { Locale } from './useLocale';
 
 const localeValues: Locale = {
     locale: 'en-US',
+    TagOverflow: { more: 'More' },
     BlockHeader: {
         expand: 'Expand',
         collapse: 'Collapse',
