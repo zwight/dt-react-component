@@ -1,0 +1,104 @@
+.tag-overflow {
+    width: 100%;
+    position: relative;
+    .tag-overflow-list {
+        width: 100%;
+        overflow: hidden;
+        .ant-space-item {
+            max-width: 100%;
+            min-width: 0;
+        }
+    }
+    .tag-overflow-visible-item {
+        display: inline-flex;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        > * {
+            max-width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .tag-overflow-default-item {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        max-width: 100%;
+        min-width: 0;
+        overflow: hidden;
+        height: 24px;
+        padding: 6px 8px;
+        color: #3D446E;
+        font-size: 12px;
+        line-height: 20px;
+        border-radius: 4px;
+        background: #FFF;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        &:hover {
+            background: #F5F5F8;
+        }
+        &__selected {
+            color: #1D78FF;
+            background: #E8F1FF;
+        }
+        &__selected:hover {
+            background: #E8F1FF;
+        }
+        > span:not(.tag-overflow-default-item-icon):not(.tag-overflow-default-item-close) {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .tag-overflow-default-item-close {
+            color: #1D78FF;
+        }
+    }
+    .tag-overflow-default-item-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 14px;
+        height: 14px;
+        line-height: 1;
+    }
+    .tag-overflow-default-item-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #8B8FA8;
+        font-size: 10px;
+        line-height: 1;
+    }
+    .tag-overflow-divider {
+        margin: 0 4px 0 0;
+        height: 12px;
+        border-left-color: #D8DAE2;
+    }
+    .tag-overflow-measure {
+        position: absolute;
+        visibility: hidden;
+        pointer-events: none;
+        left: -9999px;
+        top: -9999px;
+        white-space: nowrap;
+        display: flex;
+        gap: 8px;
+        .tag-overflow-divider {
+            margin-right: 8px;
+            width: 5px;
+        }
+    }
+    .tag-overflow-measure-item,
+    .tag-overflow-more.tag-overflow-measure-item {
+        display: inline-flex;
+        align-items: center;
+    }
+    .tag-overflow-divider-measure {
+        display: inline-flex;
+        align-items: center;
+    }
+}

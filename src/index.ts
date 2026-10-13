@@ -39,6 +39,7 @@ export { default as Resize } from './resize';
 export { default as SpreadSheet } from './spreadSheet';
 export { default as StatusTag } from './statusTag';
 export { default as Table } from './table';
+export { default as TagOverflow } from './tagOverflow';
 export { default as TinyTag } from './tinyTag';
 export { default as Tooltip } from './tooltip';
 export { default as useCookieListener } from './useCookieListener';

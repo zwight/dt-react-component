@@ -2,6 +2,7 @@ import { Locale } from './useLocale';
 
 const localeValues: Locale = {
     locale: 'zh-CN',
+    TagOverflow: { more: '更多' },
     BlockHeader: {
         expand: '展开',
         collapse: '收起',
