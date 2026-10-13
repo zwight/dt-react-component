@@ -1,0 +1,54 @@
+src/tagOverflow/demos/basic.tsx
+  s_4ebe7d686378e1::t_dc495f83be253d 1-25
+src/tagOverflow/demos/custom.tsx
+  s_4ebe7d686378e1::t_dc495f83be253d 1-21
+src/locale/en-US.ts
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 5
+src/tagOverflow/demos/interactive.tsx
+  s_4ebe7d686378e1::t_dc495f83be253d 1-23
+src/tagOverflow/__tests__/tagOverflow.test.tsx
+  s_4ebe7d686378e1::t_3c0600ff177179 24,26-28,130,133-163,172
+  s_4ebe7d686378e1::t_dc495f83be253d 8-14,29-129,167-169
+  s_4ebe7d686378e1::t_8ebacbd39ff698 1-7,15-23,25,131-132,164-166,170-171,173
+src/tagOverflow/__tests__/layout.test.ts
+  s_4ebe7d686378e1::t_ab1e96fc0ebec3 15
+  s_4ebe7d686378e1::t_dc495f83be253d 27-30
+  s_4ebe7d686378e1::t_862272dbafd6cd 1-14,16-26,31-37
+src/locale/useLocale.tsx
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 7
+src/tagOverflow/demos/multipleRows.tsx
+  s_4ebe7d686378e1::t_dc495f83be253d 1-11
+src/tagOverflow/demos/dynamic.tsx
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 1-32
+src/tagOverflow/demos/longLabel.tsx
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 1-24
+src/tagOverflow/index.scss
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 33-79
+  s_4ebe7d686378e1::t_f689451453fab0 30-32
+  s_4ebe7d686378e1::t_52522168107a6e 80-82
+src/tagOverflow/index.md
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 19-21,26-36
+  s_4ebe7d686378e1::t_dc495f83be253d 1-18,22-25,37-57
+  s_4ebe7d686378e1::t_c5f7f891b7e5a9 58
+src/locale/zh-CN.ts
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 5
+src/tagOverflow/index.tsx
+  s_4ebe7d686378e1::t_cbcb69aa10e5d3 2-106
+  s_4ebe7d686378e1::t_869dc69113e331 1,107-211
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "55fb5b9849d01f21eeec0aafddb387e045e4c264",
+  "prompts": {},
+  "sessions": {
+    "s_4ebe7d686378e1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12388-fc07-7522-9c69-180a9b78f94e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
