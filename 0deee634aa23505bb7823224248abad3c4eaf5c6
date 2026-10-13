@@ -1,0 +1,14 @@
+src/chat/conversations/hooks/useGroupable.ts
+  h_be914e06ac2555 67-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.1",
+  "base_commit_sha": "0deee634aa23505bb7823224248abad3c4eaf5c6",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}

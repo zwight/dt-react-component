@@ -1,0 +1,44 @@
+src/select/index.tsx
+  s_4ebe7d686378e1::t_d6cf125c849adf 9-30,64
+  s_4ebe7d686378e1::t_223e00e34300cc 3
+  s_4ebe7d686378e1::t_6877ed41aa3202 1-2
+  s_4ebe7d686378e1::t_ed35d3e45c5fc6 4-8
+  s_4ebe7d686378e1::t_2cadf5122d03a3 31-33,61-63
+  s_4ebe7d686378e1::t_2a03b201bb3aa5 65-67
+src/select/index.md
+  s_4ebe7d686378e1::t_544def48d5009f 1-108
+src/select/__tests__/select.test.tsx
+  s_4ebe7d686378e1::t_61a8fc5353355c 130-133
+  s_4ebe7d686378e1::t_544def48d5009f 34-36,54,56,58-82,85-129
+  s_4ebe7d686378e1::t_b0c96ed54980f6 8-14
+  s_4ebe7d686378e1::t_d47717b63a428d 83-84,139
+  s_4ebe7d686378e1::t_d6cf125c849adf 21,28,37,39,44-47,49-50,134,141,153
+  s_4ebe7d686378e1::t_df898193c591b6 33,40-43,48,57
+  s_4ebe7d686378e1::t_cb323aa2699330 1-7,15-20,22-27,29-32,38,51-53,55,135-138,140,142-152,154
+src/select/index.scss
+  s_a111022313b653::t_f56e02f528202a 1-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "c851faf5fefc37d28d620b02ce9d78e079256a84",
+  "prompts": {},
+  "sessions": {
+    "s_4ebe7d686378e1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12388-fc07-7522-9c69-180a9b78f94e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    },
+    "s_a111022313b653": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11a29-2825-7393-a9a9-855c6ab2f865",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
