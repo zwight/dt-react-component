@@ -1,0 +1,50 @@
+src/useExportPDF/index.md
+  s_4ebe7d686378e1::t_3eef2259fac903 21-22,67
+  s_4ebe7d686378e1::t_7f38f0e4b9abfd 1-20,23-66,68-71
+src/locale/zh-CN.ts
+  s_4ebe7d686378e1::t_3eef2259fac903 5
+src/useExportPDF/demos/report.tsx
+  s_4ebe7d686378e1::t_7f38f0e4b9abfd 1-2,5-50
+  s_4ebe7d686378e1::t_66a2ffefc3abff 3-4
+src/locale/useLocale.tsx
+  s_4ebe7d686378e1::t_3eef2259fac903 7
+src/useExportPDF/index.ts
+  s_4ebe7d686378e1::t_3eef2259fac903 6-550
+  s_a111022313b653::t_60ff5eb304345e 1-5,551-566
+src/useExportPDF/__tests__/useExportPDF.test.tsx
+  s_4ebe7d686378e1::t_0901933164be0e 30-33
+  s_4ebe7d686378e1::t_7f38f0e4b9abfd 10-29,34-200
+  s_4ebe7d686378e1::t_1637682aa34267 7-9
+  s_4ebe7d686378e1::t_6d327debfce42c 201
+src/locale/en-US.ts
+  s_4ebe7d686378e1::t_3eef2259fac903 5
+src/useExportPDF/demos/basic.tsx
+  s_4ebe7d686378e1::t_7f38f0e4b9abfd 1-2,4-24
+  s_4ebe7d686378e1::t_7207189cba11b6 3
+src/index.ts
+  s_a111022313b653::t_5a68b788cd4426 46
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a9c0bc5e620dc81ecdbadcd7a0792153baaf1bd3",
+  "prompts": {},
+  "sessions": {
+    "s_4ebe7d686378e1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a12388-fc07-7522-9c69-180a9b78f94e",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    },
+    "s_a111022313b653": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a11a29-2825-7393-a9a9-855c6ab2f865",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
