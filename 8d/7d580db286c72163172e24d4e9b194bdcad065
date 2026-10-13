@@ -1,0 +1,34 @@
+package.json
+  h_be914e06ac2555 122,124
+pnpm-lock.yaml
+  h_be914e06ac2555 37,42,76,78,2124,3444-3447,3462-3466,3536-3541,3990,5120-5125,5431-5446,6347-6353,7022-7029,8233-8240,8336-8339,9292,9386-9389,9417-9426,9709-9712,10897-10909,12678-12681,12864-12868,12908,13731-13737,14488,15060-15065,15766-15771,16237-16242,16356-16362,17029-17035
+src/index.ts
+  h_be914e06ac2555 48
+src/locale/en-US.ts
+  h_be914e06ac2555 6
+src/locale/useLocale.tsx
+  h_be914e06ac2555 8
+src/locale/zh-CN.ts
+  h_be914e06ac2555 6
+src/useExportPDF/__tests__/useExportPDF.test.tsx
+  h_be914e06ac2555 1-201
+src/useExportPDF/demos/basic.tsx
+  h_be914e06ac2555 1-24
+src/useExportPDF/demos/report.tsx
+  h_be914e06ac2555 1-50
+src/useExportPDF/index.md
+  h_be914e06ac2555 1-71
+src/useExportPDF/index.ts
+  h_be914e06ac2555 1-566
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8d7d580db286c72163172e24d4e9b194bdcad065",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
