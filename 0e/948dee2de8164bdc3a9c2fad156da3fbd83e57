@@ -1,0 +1,14 @@
+src/select/__tests__/select.test.tsx
+  h_be914e06ac2555 32,35,55,62
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0e948dee2de8164bdc3a9c2fad156da3fbd83e57",
+  "prompts": {},
+  "humans": {
+    "h_be914e06ac2555": {
+      "author": "zwight <zwight0705@gmail.com>"
+    }
+  }
+}
